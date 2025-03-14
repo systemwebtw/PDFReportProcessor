@@ -50,14 +50,20 @@ cd PDFReportProcessor
 
 ### 1️⃣ 分割 PDF
 
-**端點:** `POST /api/pdf/split`
+**端點:** `POST /api/pdf/splitencrypt`
 
 **請求:**
 
 ```json
 {
-  "file": "(上傳 PDF 檔案)",
-  "splitAfterPages": [2, 5]
+    "UserKey": "PDF密碼",
+    "OwnerKey": "PDF密碼",
+    "FileNames": [
+        {
+            "BF_NO": 戶號,
+            "PDFNAME": "PDF檔案名稱"
+        },
+   "PdfFile": "欲切割PDF Byte[]"
 }
 ```
 
@@ -65,8 +71,16 @@ cd PDFReportProcessor
 
 ```json
 {
-  "message": "PDF 分割成功",
-  "downloadUrls": ["/api/pdf/download/file1.pdf", "/api/pdf/download/file2.pdf"]
+  "Datas": {
+    "EncryptPdfList": [
+      {
+        "PdfFile": "(Encrypt PDF Byte[])",
+        "PdfFileName": "PDF檔案名稱.pdf"
+      }
+    ]
+  },
+  "IsSuccessful": true,
+  "Message": "異常時的訊息"
 }
 ```
 
@@ -78,8 +92,9 @@ cd PDFReportProcessor
 
 ```json
 {
-  "file": "(上傳 PDF 檔案)",
-  "password": "secure123"
+  "PdfFile": "欲加密PDF Byte[]",
+  "UserKey": "PDF密碼",
+  "OwnerKey": "PDF密碼"
 }
 ```
 
@@ -87,8 +102,9 @@ cd PDFReportProcessor
 
 ```json
 {
-  "message": "PDF 加密成功",
-  "downloadUrl": "/api/pdf/download/encrypted.pdf"
+  "Datas": "已完成加密的PDF byte[]",
+  "IsSuccessful": true,
+  "Message": "異常時的訊息"
 }
 ```
 
