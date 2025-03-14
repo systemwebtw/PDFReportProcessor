@@ -1,8 +1,8 @@
-# REPORT PDF API 服務
+# Systemweb PDF API 服務
 
 ## 概述
 
-這是一個基於 **開源 PDF 處理 API 服務**，遵循 **AGPLv3** 授權條款。本服務提供 **PDF 分割、加密等功能**，可作為獨立的 API，讓你的主應用程式避免受 **AGPL** 限制。
+這是一個基於 **開源 PDF 處理 API 服務**，遵循 **AGPLv3** 授權條款。本服務提供博暉科技的應用系統，可以透過此獨立的 API，處理 **PDF 分割、加密** 等功能。
 
 ## 功能
 
@@ -109,6 +109,6 @@ cd PDFReportProcessor
 
 ## 聯絡方式
 
-如有問題或需要支援，請至 GitHub 提出 Issue，或聯絡維護者 `your-email@example.com`。
+如有問題或需要支援，請至 GitHub 提出 Issue，或聯絡維護者 `services@systemweb.com.tw`。
 
 ---
