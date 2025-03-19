@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Systemweb.ReportPDFProcessor</name>
+    </assembly>
+    <members>
+        <member name="T:Systemweb.ReportPDFProcessor.SwaggerConfig">
+            <summary>
+            SwaggerConfig
+            </summary>
+        </member>
+        <member name="M:Systemweb.ReportPDFProcessor.SwaggerConfig.Register">
+            <summary>
+            Register
+            </summary>
+        </member>
+        <member name="T:Systemweb.ReportPDFProcessor.WebApiConfig">
+            <summary>
+            WebApi Config
+            </summary>
+        </member>
+        <member name="M:Systemweb.ReportPDFProcessor.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Register
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:Systemweb.ReportPDFProcessor.Controllers.PdfController">
+            <summary>
+            PDF 控制器
+            </summary>
+        </member>
+        <member name="M:Systemweb.ReportPDFProcessor.Controllers.PdfController.PdfSplitEncrypt(Systemweb.ReportPDFProcessor.Models.PdfSplitEncryptRequest)">
+            <summary>
+            PDF切割與加密
+            </summary>
+        </member>
+        <member name="M:Systemweb.ReportPDFProcessor.Controllers.PdfController.PdfEncrypt(Systemweb.ReportPDFProcessor.Models.PdfEncryptRequest)">
+            <summary>
+            PDF加密
+            </summary>
+        </member>
+        <member name="T:Systemweb.ReportPDFProcessor.Core.BaseApiController">
+            <summary>
+            BaseApi Controller
+            </summary>
+        </member>
+        <member name="M:Systemweb.ReportPDFProcessor.Core.BaseApiController.Initialize(System.Web.Http.Controllers.HttpControllerContext)">
+            <summary>
+            初始化
+            </summary>
+            <param name="controllerContext"></param>
+        </member>
+        <member name="M:Systemweb.ReportPDFProcessor.Core.BaseApiController.InitialLogInfo(System.Web.Http.Controllers.HttpControllerContext)">
+            <summary>
+            InitialLogInfo
+            </summary>
+            <param name="controllerContext"></param>
+        </member>
+        <member name="T:Systemweb.ReportPDFProcessor.Core.PdfHelper">
+            <summary>
+            PDF 小幫手
+            </summary>
+        </member>
+        <member name="M:Systemweb.ReportPDFProcessor.Core.PdfHelper.PdfSplitEncrypt(System.Byte[],System.Collections.Generic.List{Systemweb.ReportPDFProcessor.Models.FileNameMappingModel},System.String,System.String)">
+            <summary>
+            PDF切割且加密
+            </summary>
+            <param name="pdfBytes">欲切割原始PDF檔案</param>
+            <param name="pdfNames">檔案名稱清單</param>
+            <param name="userkey">使用者開啟密碼</param>
+            <param name="ownerkey">擁有者開啟密碼</param>
+            <returns></returns>
+        </member>
+        <member name="M:Systemweb.ReportPDFProcessor.Core.PdfHelper.PdfEncrypt(System.Byte[],System.Boolean,System.String,System.String)">
+            <summary>
+            PDF檔案崁入開啟密碼
+            </summary>
+            <param name="pdfBytes">來源PDF檔</param>
+            <param name="strength">設為true</param>
+            <param name="userkey">使用者開啟密碼</param>
+            <param name="ownerkey">擁有者開啟密碼</param>
+        </member>
+        <member name="T:Systemweb.ReportPDFProcessor.Global">
+            <summary>
+            Global
+            </summary>
+        </member>
+        <member name="F:Systemweb.ReportPDFProcessor.Global.Log">
+            <summary>
+            Log物件
+            </summary>
+        </member>
+        <member name="T:Systemweb.ReportPDFProcessor.WebApiApplication">
+            <summary>
+            WebApiApplication
+            </summary>
+        </member>
+        <member name="M:Systemweb.ReportPDFProcessor.WebApiApplication.Application_Start">
+            <summary>
+            Application_Start
+            </summary>
+        </member>
+        <member name="T:Systemweb.ReportPDFProcessor.Models.PdfEncryptRequest">
+            <summary>
+            PdfEncrypt Request
+            </summary>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.Models.PdfEncryptRequest.PdfFile">
+            <summary>
+            要加密的Pdf檔案
+            </summary>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.Models.PdfEncryptRequest.UserKey">
+            <summary>
+            使用者開啟Key
+            </summary>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.Models.PdfEncryptRequest.OwnerKey">
+            <summary>
+            擁有者開啟Key
+            </summary>
+        </member>
+        <member name="T:Systemweb.ReportPDFProcessor.Models.PdfSplitEncryptRequest">
+            <summary>
+            PdfSplitEncrypt Request
+            </summary>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.Models.PdfSplitEncryptRequest.PdfFile">
+            <summary>
+            PDF檔案(欲分割檔案)
+            </summary>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.Models.PdfSplitEncryptRequest.FileNames">
+            <summary>
+            PDF名稱對應清單
+            </summary>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.Models.PdfSplitEncryptRequest.UserKey">
+            <summary>
+            使用者開啟Key
+            </summary>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.Models.PdfSplitEncryptRequest.OwnerKey">
+            <summary>
+            擁有者開啟Key
+            </summary>
+        </member>
+        <member name="T:Systemweb.ReportPDFProcessor.Models.FileNameMappingModel">
+            <summary>
+            PDF名稱對應表
+            </summary>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.Models.FileNameMappingModel.BF_NO">
+            <summary>
+            戶號
+            </summary>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.Models.FileNameMappingModel.PDFNAME">
+            <summary>
+            PDF檔案名稱
+            </summary>
+        </member>
+        <member name="T:Systemweb.ReportPDFProcessor.Models.PdfSplitEncryptResponse">
+            <summary>
+            PdfSplitEncrypt Response
+            </summary>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.Models.PdfSplitEncryptResponse.EncryptPdfList">
+            <summary>
+            PDF加密清單
+            </summary>
+        </member>
+        <member name="T:Systemweb.ReportPDFProcessor.Models.PdfFileInfo">
+            <summary>
+            PDF檔案資訊
+            </summary>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.Models.PdfFileInfo.PdfFile">
+            <summary>
+            PDF檔案
+            </summary>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.Models.PdfFileInfo.PdfFileName">
+            <summary>
+            PDF檔案名稱
+            </summary>
+        </member>
+        <member name="T:Systemweb.ReportPDFProcessor.Models.PdfSplitRequest">
+            <summary>
+            PdfSplit Request
+            </summary>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.Models.PdfSplitRequest.SourceFilePath">
+            <summary>
+            欲切割原始PDF檔案(含路徑)
+            </summary>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.Models.PdfSplitRequest.TargetFolderPath">
+            <summary>
+            PDF切割後儲存路徑(目錄)
+            </summary>
+        </member>
+        <member name="T:Systemweb.ReportPDFProcessor.ResultModel`1">
+            <summary>
+            ResultModel
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.ResultModel`1.Datas">
+            <summary>
+            資料內容
+            </summary>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.ResultModel`1.IsSuccessful">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:Systemweb.ReportPDFProcessor.ResultModel`1.Message">
+            <summary>
+            訊息
+            </summary>
+        </member>
+        <member name="M:Systemweb.ReportPDFProcessor.ResultModel`1.SetSuccess">
+            <summary>
+            設定成功
+            </summary>
+        </member>
+        <member name="M:Systemweb.ReportPDFProcessor.ResultModel`1.SetError(System.String)">
+            <summary>
+            設定失敗
+            </summary>
+        </member>
+        <member name="M:Systemweb.ReportPDFProcessor.ResultModel`1.SetException(System.Exception)">
+            <summary>
+            設定異常
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
